@@ -17,7 +17,7 @@ public class SwitchCanvas : MonoBehaviour, IPointerClickHandler
         firstCanvas = GameObject.FindGameObjectWithTag("FirstCanvas");
 
         //Obtener el padre
-        canvas = GameObject.Find("UI");
+        canvas = GameObject.Find("UI Components");
         Transform parentTransform = canvas.transform;
 
         // Encontrar el GameObject desactivado en la jerarquía
