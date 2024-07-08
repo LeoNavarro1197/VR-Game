@@ -38,6 +38,7 @@ public class Proveedores : MonoBehaviour
             // Obtener la posición correspondiente al índice aleatorio
             Vector2 position = positions[availableIndices[randomIndex]];
 
+
             // Eliminar el índice de la lista para evitar repetición
             availableIndices.RemoveAt(randomIndex);
 

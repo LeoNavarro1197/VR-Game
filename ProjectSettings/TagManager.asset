@@ -9,6 +9,7 @@ TagManager:
   - Water
   - Destroyer
   - FirstExample
+  - FirstCanvas
   layers:
   - Default
   - TransparentFX

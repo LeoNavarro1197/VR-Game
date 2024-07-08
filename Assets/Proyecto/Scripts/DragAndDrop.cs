@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class DragAndDrop : MonoBehaviour
+public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public GameObject objectToDrag;
     public GameObject objectDragToPos;
@@ -15,7 +15,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void Start()
     {
-        //objectInitPos.position = objectToDrag.transform.position;
+        objectInitPos.position = objectToDrag.transform.position;
     }
 
     public void DragObject()
@@ -40,7 +40,7 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
-    /*private RectTransform rectTransform;
+    private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
     private void Awake()
@@ -64,5 +64,5 @@ public class DragAndDrop : MonoBehaviour
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
-    }*/
+    }
 }

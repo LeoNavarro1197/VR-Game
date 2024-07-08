@@ -10,7 +10,7 @@ public class SwitchPanel : MonoBehaviour
 
     public void ChangeCanvas()
     {
-        firstCanvas.SetActive(false);
         secondCanvas.SetActive(true);
+        firstCanvas.SetActive(false);
     }
 }

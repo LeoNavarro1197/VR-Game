@@ -21,7 +21,7 @@ public class SwitchCanvas : MonoBehaviour, IPointerClickHandler
         Transform parentTransform = canvas.transform;
 
         // Encontrar el GameObject desactivado en la jerarquía
-        Transform transformSecondCanvas = parentTransform.Find("Formula");
+        Transform transformSecondCanvas = parentTransform.Find("Formula Ejercicio");
 
         //Convertir a GameObject
         secondCanvas = transformSecondCanvas.gameObject;
