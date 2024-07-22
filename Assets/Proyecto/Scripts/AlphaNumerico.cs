@@ -11,6 +11,10 @@ public class AlphaNumerico : MonoBehaviour
     public TextMeshProUGUI fraccionTiempoResultado, fraccionTiempoResultadoAprox, fraccionTiempoResultadoAprox1, fraccionTiempoResultadoAprox2;
     public TextMeshProUGUI PRFrascos, NMEResultado;
 
+    public CalculateCAP calculateCAP;
+    public GameObject panelCongrats;
+    public GameObject panelFormula;
+
     public string CAP;
 
     // Start is called before the first frame update
@@ -52,5 +56,21 @@ public class AlphaNumerico : MonoBehaviour
         NMEResultado.text = ((int.Parse(fraccionTiempoResultadoAprox2.text)) + (int.Parse(resultadoCPMDividido3.text))).ToString();
 
         CAP = (int.Parse(PRFrascos.text) + (int.Parse(resultadoCPMDividido.text) * 1) - int.Parse(existencias.text)).ToString();
+    }
+
+    private void Update()
+    {
+        if (calculateCAP.ejercicioCorrecto)
+        {
+            panelCongrats.SetActive(true);
+            panelFormula.SetActive(false);
+            calculateCAP.ejercicioCorrecto = false;
+            Invoke("OffPanelCongrats", 3f);
+        }
+    }
+
+    void OffPanelCongrats()
+    {
+        panelCongrats.SetActive(false);
     }
 }

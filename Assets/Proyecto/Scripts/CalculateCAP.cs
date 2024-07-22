@@ -9,15 +9,17 @@ public class CalculateCAP : MonoBehaviour
     public AlphaNumerico alphaNumerico;
     public TextMeshProUGUI resultText;
 
+    public bool ejercicioCorrecto = false;
+
     public void ResultVerification()
     {
         if (alphaNumerico.CAP == resultText.text)
         {
-            print("Correcto");
+            ejercicioCorrecto = true;
         }
         else
         {
-            print("Incorrecto");
+            ejercicioCorrecto = false;
         }
     }
 
